@@ -32,7 +32,7 @@ public class InputFieldGrabber : MonoBehaviour
         SetEndDateString();
         
         GameObject excursion = Instantiate(excursionPrefab, excursionContent);
-        excursion.GetComponent<SetExcursionData>().SetData(titleInputText, descriptionInputText, startDate, endDate);
+        excursion.GetComponent<ExcursionData>().SetData(titleInputText, descriptionInputText, startDate, endDate);
         
         FindFirstObjectByType<TabManager>().CloseCreateExcursionTab();
     }
